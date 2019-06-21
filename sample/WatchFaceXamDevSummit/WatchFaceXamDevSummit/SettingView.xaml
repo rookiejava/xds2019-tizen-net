@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             x:Class="WatchFaceXamDevSummit.SettingView">
+    <ContentView.Content>
+        <w:CircleScrollView x:Name="CircleScrollView" BackgroundColor="Black">
+            <w:CircleScrollView.Content>
+                <StackLayout Margin="0,20,0,0">
+                    <Label Text="Setting" Font="20,Bold" TextColor="#3498DB" HorizontalOptions="CenterAndExpand"/>
+                    <Button x:Name ="HourColorButton" Text="Hour Color" Clicked="OnColorButtonClicked"/>
+                    <Button x:Name ="MinuteColorButton" Text="Minute Color" Clicked="OnColorButtonClicked"/>
+                    <Button x:Name ="BackgroundColorButton" Text="Background Color" Clicked="OnColorButtonClicked"/>
+                    <Button x:Name ="ResetColorButton" Text="Reset Color" Clicked="OnResetColorButtonClicked"/>
+                    <!-- Placeholder for scroll-->
+                    <Label IsEnabled="False"/>
+                </StackLayout>
+            </w:CircleScrollView.Content>
+        </w:CircleScrollView>
+    </ContentView.Content>
+</ContentView>

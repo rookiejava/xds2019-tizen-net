@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WatchFaceXamDevSummit.WatchView">
+    <AbsoluteLayout InputTransparent="true">
+        <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="{Binding BackgroundImage}" BackgroundColor="{Binding BackgroundColor}"/>
+        <Label
+            x:Name="TimeLabelHH"
+            AbsoluteLayout.LayoutBounds="{Binding HourBounds}"
+            AbsoluteLayout.LayoutFlags="None"
+            TextColor="{Binding HourColor}"
+            FontFamily="Ubuntu"
+            FontSize="{Binding HourFontSize}"
+            Text="{Binding Hour, StringFormat='{0:00}'}"/>
+        <Label
+            x:Name="TimeLabelMM"
+            AbsoluteLayout.LayoutBounds="{Binding MinuteBounds}"
+            AbsoluteLayout.LayoutFlags="None"
+            TextColor="{Binding MinuteColor}"
+            FontFamily="Ubuntu"
+            FontSize="{Binding MinuteFontSize}"
+            Text="{Binding Minute, StringFormat='{0:00}'}"/>
+    </AbsoluteLayout>
+</ContentView>
