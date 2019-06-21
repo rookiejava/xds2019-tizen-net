@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:local="clr-namespace:WatchFaceXamDevSummit;assembly=WatchFaceXamDevSummit"
+             x:Class="WatchFaceXamDevSummit.App">
+    <Application.MainPage>
+        <w:CirclePage RotaryFocusObject="{Binding RotarayFocusObject}" ActionButton="{Binding ActionButton}">
+            <AbsoluteLayout>
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding EnterSettingCommand}"/>
+                    <TapGestureRecognizer NumberOfTapsRequired="3" Command="{Binding ChangeBackgroundImageCommand}"/>
+                </AbsoluteLayout.GestureRecognizers>
+                <local:WatchView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" IsVisible="{Binding SettingEnabled}" Content="{Binding SettingView}"/>
+            </AbsoluteLayout>
+        </w:CirclePage>
+    </Application.MainPage>
+</Application>
