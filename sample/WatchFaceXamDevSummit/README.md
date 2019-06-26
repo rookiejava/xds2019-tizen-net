@@ -1,10 +1,8 @@
-#Xamarin Developer Summit Watcface
+# Xamarin Developer Summit Watcface
 Simple watchface for Xamarin Developer Summit.
 
-![Choose](Choose.png)
-![City](City.png)
-![Monkey](Monkey.png)
-![Setting](Setting.png)
+<img src="Choose.png" width=180/> <img src="City.png" width=180/>
+<img src="Monkey.png" width=180/> <img src="Setting.png" width=180/>
 
 ### Usage
 - Double tap for entering setting page
