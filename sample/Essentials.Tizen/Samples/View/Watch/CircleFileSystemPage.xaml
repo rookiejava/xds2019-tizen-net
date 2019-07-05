@@ -1,0 +1,26 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleFileSystemPage"
+                Title="File System"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:FileSystemViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout Padding="12" Spacing="6">
+            <Label Text="Easily save files to app data." FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal" Spacing="6">
+                <Button Text="Load" Command="{Binding LoadFileCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Save" Command="{Binding SaveFileCommand}" HorizontalOptions="FillAndExpand" />
+                <Button Text="Delete" Command="{Binding DeleteFileCommand}" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+            <Label Text="Edit the contents of the file:" />
+        <Editor Text="{Binding CurrentContents}" VerticalOptions="FillAndExpand" />
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>

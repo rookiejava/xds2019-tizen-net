@@ -1,0 +1,24 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:Samples.View"
+             xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+             x:Class="Samples.View.CirclePhoneDialerPage"
+             Title="PhoneDialer"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:PhoneDialerViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout>
+            <Label Text="Easily open the phone dialer." FontAttributes="Bold" Margin="12" />
+            <StackLayout Padding="12,0,12,12" Spacing="6">
+                <Label Text="Phone number:" />
+                <Entry Text="{Binding PhoneNumber}" Keyboard="Telephone" />
+                <Button Text="Open Phone Dialer" Command="{Binding OpenPhoneDialerCommand}" IsEnabled="{Binding IsEnabled}" />
+            </StackLayout>
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>

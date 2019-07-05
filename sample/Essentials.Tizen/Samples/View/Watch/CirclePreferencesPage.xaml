@@ -1,0 +1,23 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CirclePreferencesPage"
+                Title="Preferences"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:PreferencesViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout>
+            <Label Text="Quickly and easily add persistent preferences." FontAttributes="Bold" Margin="12" />
+            <StackLayout Padding="12,0,12,12" Spacing="6">
+                <Label Text="Enter some text to save:" />
+                <Entry Placeholder="Enter text..." Text="{Binding PreferenceValue}" />
+            </StackLayout>
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>

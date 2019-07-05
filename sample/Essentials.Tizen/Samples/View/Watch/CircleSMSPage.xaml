@@ -1,0 +1,28 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleSMSPage"
+                Title="SMS"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:SmsViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout Padding="12,0,12,12" Spacing="6">
+            <Label Text="Easily send SMS messages." FontAttributes="Bold" Margin="12" />
+
+                <Label Text="Recipents (optional, separate multiple with ',' or '*'):" />
+                <Entry Text="{Binding Recipient}" Keyboard="Telephone" />
+                <Label Text="Message Text (optional):" />
+                <Entry Text="{Binding MessageText}" />
+
+                <Button Text="Send SMS" Command="{Binding SendSmsCommand}" />
+
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>
