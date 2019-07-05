@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="WatchFaceXamMonkey" version="1.0.0" api-version="4" xmlns="http://tizen.org/ns/packages">
+    <author email="rookiejava@gmail.com">Kangho Hur</author>
+    <profile name="wearable" />
+    <watch-application appid="WatchFaceXamMonkey" exec="WatchFaceXamMonkey.dll" type="dotnet" ambient-support="false">
+        <label>XamarinDevSummit</label>
+        <icon>monkeyface.png</icon>
+        <metadata key="http://tizen.org/metadata/prefer_dotnet_aot" value="true" />
+        <splash-screens />
+    </watch-application>
+    <shortcut-list />
+    <privileges>
+        <privilege>http://tizen.org/privilege/alarm.set</privilege>
+    </privileges>
+    <provides-appdefined-privileges />
+    <feature name="http://tizen.org/feature/watch_app">true</feature>
+</manifest>

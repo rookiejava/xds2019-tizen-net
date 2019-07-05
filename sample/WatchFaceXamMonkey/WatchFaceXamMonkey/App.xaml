@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+             xmlns:local="clr-namespace:WatchFaceXamMonkey;assembly=WatchFaceXamMonkey"
+             x:Class="WatchFaceXamMonkey.App">
+    <Application.MainPage>
+        <w:CirclePage>
+            <AbsoluteLayout>
+                <AbsoluteLayout.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="2" Command="{Binding AnimateMonkeyCommand}"/>
+                    <TapGestureRecognizer NumberOfTapsRequired="3" Command="{Binding ShowLottieAnimationCommand}"/>
+                </AbsoluteLayout.GestureRecognizers>
+                <local:WatchView x:Name="WView" AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All"/>
+                <ContentView AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Content="{Binding FunAnimationView}" IsVisible="True"/>
+            </AbsoluteLayout>
+        </w:CirclePage>
+    </Application.MainPage>
+</Application>
