@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WatchFaceXamMonkey.WatchView">
+    <AbsoluteLayout InputTransparent="true">
+        <Image AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="XamDevSummitBG.png"/>
+        <Image x:Name ="MonkeyImage" AbsoluteLayout.LayoutBounds="45, 70, 270, 270" AbsoluteLayout.LayoutFlags="None" Source="monkeyface.png"/>
+        <Label
+            x:Name="DayLabel"
+            AbsoluteLayout.LayoutBounds="220, 30, 150, 40"
+            AbsoluteLayout.LayoutFlags="None"
+            TextColor="White"
+            FontSize="6"
+            Text="{Binding Date}"/>
+        <Label
+            x:Name="TimeLabelHH"
+            AbsoluteLayout.LayoutBounds="170, 50, 200, 60"
+            AbsoluteLayout.LayoutFlags="None"
+            TextColor="White"
+            FontSize="18"
+            Text="{Binding Time}"/>
+    </AbsoluteLayout>
+</ContentView>
