@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextToSpeech.Controls.SpeakButtonControl"
+             x:Name="Root">
+    <ContentView.Content>
+        <AbsoluteLayout>
+            <Image AbsoluteLayout.LayoutBounds=".5, .5, 134, 134"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Source="images/sounds_bg.png"
+                   IsVisible="True"
+                   x:Name="DefaultBackgroundImage" />
+            <Image AbsoluteLayout.LayoutBounds=".5, .5, 101, 101"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Source="images/sounds.png"
+                   x:Name="DefaultForegroundImage" />
+            <Image AbsoluteLayout.LayoutBounds=".5, .5, 101, 101"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   Source="images/sounds_pressed.png"
+                   x:Name="PressedForegroundImage"
+                   Opacity="0" />
+            <BoxView AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                     AbsoluteLayout.LayoutFlags="All"
+                     x:Name="TapLayer">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnTapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+        </AbsoluteLayout>
+    </ContentView.Content>
+</ContentView>
