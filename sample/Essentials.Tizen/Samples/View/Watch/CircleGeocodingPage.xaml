@@ -1,0 +1,35 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleGeocodingPage"
+                Title="Geocoding"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:GeocodingViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout Padding="12" Spacing="6">
+            <Label Text="Easily geocode and reverse geocoding." FontAttributes="Bold" Margin="12" />
+
+                <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
+
+                <Label Text="Geocoding:" FontAttributes="Bold" Margin="0,6,0,0" />
+                <Label Text="Latitude:" />
+                <Entry Text="{Binding Latitude}" Keyboard="Numeric" />
+                <Label Text="Longitude:" />
+                <Entry Text="{Binding Longitude}" Keyboard="Numeric" />
+                <Button Text="Detect Placemarks" Command="{Binding GetAddressCommand}" IsEnabled="{Binding IsNotBusy}" />
+                <Label Text="{Binding GeocodeAddress}" />
+
+                <Label Text="Reverse Geocoding:" FontAttributes="Bold" Margin="0,6,0,0" />
+                <Label Text="Address:" />
+                <Entry Text="{Binding Address}" />
+                <Button Text="Detect Location" Command="{Binding GetPositionCommand}" IsEnabled="{Binding IsNotBusy}" />
+                <Label Text="{Binding GeocodePosition}" />
+            </StackLayout>
+        </w:CircleScrollView>
+
+</views:CircleBasePage>

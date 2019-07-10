@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples.Tizen", "Samples.Tizen\Samples.Tizen.csproj", "{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Samples", "Samples\Samples.csproj", "{022AB21F-04D7-45E2-B72F-E063013AE4CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Docs|Any CPU = Docs|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Samples|Any CPU = Samples|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Docs|Any CPU.ActiveCfg = Debug|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Docs|Any CPU.Build.0 = Debug|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Samples|Any CPU.ActiveCfg = Debug|Any CPU
+		{3558D150-FEF2-46BA-81CD-8C9A1786CBAC}.Samples|Any CPU.Build.0 = Debug|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Docs|Any CPU.ActiveCfg = Docs|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Docs|Any CPU.Build.0 = Docs|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Samples|Any CPU.ActiveCfg = Samples|Any CPU
+		{022AB21F-04D7-45E2-B72F-E063013AE4CB}.Samples|Any CPU.Build.0 = Samples|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FAC90304-0844-4FCB-97CE-31F0B95D8A6F}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleHomePage"
+                
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleListView}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:HomeViewModel />
+    </views:CircleBasePage.BindingContext>
+  
+    <w:CircleListView x:Name="CircleListView"
+                      ItemsSource="{Binding FilteredItems}"
+                      HasUnevenRows="true"
+                      ItemTapped="OnSampleTapped"
+                      VerticalOptions="FillAndExpand">
+
+      <w:CircleListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Grid Padding="12" ColumnSpacing="6" RowSpacing="3">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+              </Grid.RowDefinitions>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48" />
+                <ColumnDefinition Width="*" />
+              </Grid.ColumnDefinitions>
+
+              <Label Text="{Binding Icon}"
+                     FontSize="24"
+                     Grid.RowSpan="2"
+                     HorizontalOptions="Center" VerticalOptions="Center" />
+
+              <Label Text="{Binding Name}"
+                     FontAttributes="Bold"
+                     Grid.Column="1" />
+              <Label Text="{Binding Description}"
+                     FontAttributes="Italic" TextColor="DarkGray"
+                     Grid.Column="1" Grid.Row="1" />
+            </Grid>
+          </ViewCell>
+        </DataTemplate>
+      </w:CircleListView.ItemTemplate>
+    </w:CircleListView>
+  </views:CircleBasePage>

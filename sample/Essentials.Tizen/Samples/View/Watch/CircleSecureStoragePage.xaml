@@ -1,0 +1,32 @@
+﻿<views:CircleBasePage xmlns="http://xamarin.com/schemas/2014/forms"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:views="clr-namespace:Samples.View"
+                xmlns:viewmodels="clr-namespace:Samples.ViewModel"
+                x:Class="Samples.View.CircleSecureStoragePage"
+                Title="Secure Storage"
+                xmlns:w="clr-namespace:Tizen.Wearable.CircularUI.Forms;assembly=Tizen.Wearable.CircularUI.Forms"
+                RotaryFocusObject="{x:Reference CircleScrollViewName}">
+    <views:CircleBasePage.BindingContext>
+        <viewmodels:SecureStorageViewModel />
+    </views:CircleBasePage.BindingContext>
+
+    <w:CircleScrollView x:Name="CircleScrollViewName">
+        <StackLayout>
+            <Label Text="Easily store secure data." FontAttributes="Bold" Margin="12" />
+            <StackLayout Padding="12,0,12,12" Spacing="6">
+                <Label Text="Key:" />
+                <Entry Placeholder="Enter key..." Text="{Binding Key}" />
+
+                <Label Text="Value:" />
+                <Entry Placeholder="Enter text..." Text="{Binding SecuredValue}" />
+
+                <Button Text="Load" Command="{Binding LoadCommand}" IsEnabled="{Binding IsNotBusy}" />
+                <Button Text="Save" Command="{Binding SaveCommand}" IsEnabled="{Binding IsNotBusy}" />
+                <Button Text="Remove" Command="{Binding RemoveCommand}" IsEnabled="{Binding IsNotBusy}" />
+
+                <Button Text="Remove All" Command="{Binding RemoveAllCommand}" IsEnabled="{Binding IsNotBusy}" Margin="0,10,0,0" />
+            </StackLayout>
+        </StackLayout>
+    </w:CircleScrollView>
+
+</views:CircleBasePage>
