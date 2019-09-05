@@ -1,7 +1,7 @@
 # Xamarin Developer Summit 2019 - Tizen .NET
 A curated list of demo/samples/resources of Tizen .NET from [Xamarin Developer Summit (XamDevSummit) 2019](https://xamarindevelopersummit.com/).
   
-## Workshop (Register [Here](https://www.eventbrite.com/e/tizen-workshop-at-xamdevsummit-tickets-63801620364))
+## Workshop (~~Register [Here](https://www.eventbrite.com/e/tizen-workshop-at-xamdevsummit-tickets-63801620364)~~)
 <img src="https://pbs.twimg.com/media/D9c5-MRW4AAWE3Q.jpg"></img>
 - Title
   - **Develop a Tizen Application using Xamarin.Forms and .NET**
@@ -26,5 +26,5 @@ A curated list of demo/samples/resources of Tizen .NET from [Xamarin Developer S
     - UI Test Automation, Lottie, ...
   - Introduction for App store and Tizen .NET Apps
   - Applicstions demo
-- Slide
-  - Comming soon.
+- [Slide](https://github.com/xamarindevelopersummit/XamDevSummit2019/tree/master/talks/Jay%20Cho%20-%20Xamarin.Forms%20on%20Samsung%20Wearable%20and%20TV%20products)
+  
